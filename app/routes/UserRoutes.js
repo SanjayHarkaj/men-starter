@@ -1,6 +1,9 @@
 var express = require('express');
 var router = express.Router();
 var UserController = require('../controllers/UserController');
+var UserMiddleware = require('../middleware/UserMiddleware');
+
+router  = UserMiddleware;
 
 // Get all Users
 router.route('/').get(UserController.getUsers);
