@@ -1,9 +1,8 @@
 var express = require('express');
-var router = express.Router();
 var UserController = require('../controllers/UserController');
 var UserMiddleware = require('../middleware/UserMiddleware');
 
-router  = UserMiddleware;
+router  = UserMiddleware; // router intialized and users middleware added
 
 // Get all Users
 router.route('/').get(UserController.getUsers);
